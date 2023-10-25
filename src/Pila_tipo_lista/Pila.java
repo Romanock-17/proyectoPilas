@@ -15,6 +15,7 @@ public class Pila {
 
     public void insertarInicio(int dato) {
         Nodo nuevo = new Nodo(dato);
+        tope++;
         nuevo.setDato(dato);
         if (this.punta != null) nuevo.setLiga(this.punta);
         this.punta = nuevo;
@@ -29,7 +30,6 @@ public class Pila {
     }
 
     public void apilar(int d) {
-        this.tope++;
         insertarInicio(d);
     }
 
